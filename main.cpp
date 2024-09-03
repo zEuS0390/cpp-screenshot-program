@@ -2,7 +2,8 @@
 #include <windows.h>
 #include <sstream>
 
-void captureScreen(std::string path) {
+void captureScreen(std::string path)
+{
 	std::wstring wide_string_path = std::wstring(path.begin(), path.end());
 	const wchar_t* wPath = wide_string_path.c_str();
 
@@ -68,7 +69,7 @@ void captureScreen(std::string path) {
 	DeleteObject(hBitmap);
 }
 
-int main () 
+int main ()
 {
 	int n = 0;
 	while (n < 10)
